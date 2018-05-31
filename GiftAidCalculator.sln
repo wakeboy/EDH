@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftAidCalculator.TestConsole", "GiftAidCalculator.TestConsole\GiftAidCalculator.TestConsole.csproj", "{B477BF8C-D438-453E-A6B2-13E7EA6F2459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GiftAidCalculator.TestConsole", "GiftAidCalculator.TestConsole\GiftAidCalculator.TestConsole.csproj", "{B477BF8C-D438-453E-A6B2-13E7EA6F2459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftAidCalculator.Tests", "GiftAidCalculator.Tests\GiftAidCalculator.Tests.csproj", "{898E7EBE-8563-48AE-BADC-FFCBA1EA1AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GiftAidCalculator.Tests", "GiftAidCalculator.Tests\GiftAidCalculator.Tests.csproj", "{898E7EBE-8563-48AE-BADC-FFCBA1EA1AAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D45B0A3-7AE5-47B4-B674-D384DD61B4A6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
