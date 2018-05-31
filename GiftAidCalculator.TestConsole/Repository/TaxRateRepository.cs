@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace GiftAidCalculator.TestConsole.Repository
 {
     public class TaxRateRepository : IRepository<decimal>
     {
-        public decimal GetAsync()
+        public decimal Get()
         {
+            // TODO: get tax rate from data store
             return 20m;
         }
     }

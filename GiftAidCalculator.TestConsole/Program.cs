@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiftAidCalculator.TestConsole.Repository;
+using System;
 using System.IO;
 
 namespace GiftAidCalculator.TestConsole
@@ -7,12 +8,6 @@ namespace GiftAidCalculator.TestConsole
     {
         static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
-            IConfigurationRoot configuration = builder.Build();
-
             // Calc Gift Aid Based on Previous
             Console.WriteLine("Please Enter donation amount:");
             Console.WriteLine(GiftAidAmount(decimal.Parse(Console.ReadLine())));
@@ -22,7 +17,9 @@ namespace GiftAidCalculator.TestConsole
 
         static decimal GiftAidAmount(decimal donationAmount)
         {
-            var calculator = new GaCalculator();
+            // TODO: Handle DI with an IoC container
+            var taxRateRepository = new TaxRateRepository();
+            var calculator = new GaCalculator(taxRateRepository);
             return calculator.GiftAidAmount(donationAmount);
         }
     }

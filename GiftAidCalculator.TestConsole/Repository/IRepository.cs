@@ -4,6 +4,6 @@ namespace GiftAidCalculator.TestConsole.Repository
 {
     public interface IRepository<T>
     {
-        T GetAsync();
+        T Get();
     }
 }
